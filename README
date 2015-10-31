@@ -1,0 +1,7 @@
+SCRIPTY
+===================
+
+Format of show JSON files:
+
+	array of:
+		arrays of character, line

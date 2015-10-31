@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Line Player</title>
-    
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" crossorigin="anonymous"></script>
+  <title>Line Player</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-    
-    <!-- Custom styles for this template -->
-    <link href="player.css" rel="stylesheet">
-  </head>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" crossorigin="anonymous"></script>
 
-  <body>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-    <div class="container">
-      <div class="header clearfix">
-	<nav>
-	  <ul class="nav nav-pills pull-right">
-	    <li role="presentation"><a href="?sherlock">Sherlock</a></li>
-	  </ul>
-	</nav>
-	<h3 class="text-muted">Line Player</h3>
-      </div>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-      <div class="jumbotron">
-	<h1>Loading...</h1>
-	<p class="lead"></p>
-	<div class="row">
-	  <div class="col-xs-3">
-	    <select class="form-control" id="character">
-	    </select>
-	  </div>
-	  <div class="col-xs-3">
-	    <a class="btn btn-success" href="#" role="button">Start</a>
-	  </div>
-	</div>
-      </div>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
+  <!-- Custom styles for this template -->
+  <link href="player.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="?sherlock">Sherlock</a></li>
+        </ul>
+      </nav>
+      <h3 class="text-muted">Line Player</h3>
+    </div>
+
+    <div class="jumbotron">
+      <h3>Select your part:</h3>
+      <p class="lead"></p>
       <div class="row">
-	<div class="col-lg-6" id="other">
-	</div>
-	<div class="col-lg-6" id="you">
-	</div>
+        <div class="col-xs-3">
+          <select class="form-control" id="character">
+          </select>
+        </div>
+        <div class="col-xs-3">
+          <button class="btn btn-success" role="button" id="start">Start</button>
+        </div>
       </div>
+    </div>
 
-      <footer class="footer">
-	<p></p>
-      </footer>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Lines</div>
+      <div class="panel-body">
+	<audio id="#player-1" class="playback next" controls></audio>
+	<audio id="#player-2" class="playback" controls></audio>
+      </div>
+      <ul class="list-group" id="lines">
+      </ul>
+      <div class="panel-footer"></div>
+    </div>
 
-    </div> <!-- /container -->
-    <script src="player.js"></script>
-  </body>
+    <footer class="footer">
+      <p></p>
+    </footer>
+
+  </div> <!-- /container -->
+  <script src="player.js"></script>
+</body>
 </html>

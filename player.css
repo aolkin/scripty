@@ -1,0 +1,8 @@
+
+audio {
+    width: 100%;
+}
+
+.playback.next {
+    display: none;
+}
