@@ -1,8 +1,33 @@
 
-audio {
+.btn-full, audio, .slider.slider-horizontal {
     width: 100%;
+}
+
+.slider-track-low, .slider-track-high {
+    box-shadow: inset 0 1px 3px 1px rgba(0,0,0,0.3);
+}
+
+.btn-half {
+    width: 49%;
+}
+
+.playback {
+    display: none;
 }
 
 .playback.next {
     display: none;
+}
+
+#lines {
+    height: 24em;
+    overflow: hidden;
+}
+
+.hidden-part span {
+    visibility: hidden;
+}
+
+.slider-selection {
+    background: #BABABA;
 }
